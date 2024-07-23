@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "libsodium": "^0.7.13",
+    "libsodium-wrappers": "^0.7.13"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-brotli": "^3.0.0",
+    "gulp-compress": "^0.0.9",
+    "gulp-gzip": "^1.4.2",
+    "gulp-zip": "^6.0.0"
+  }
+}
