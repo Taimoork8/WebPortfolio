@@ -11,8 +11,9 @@ firebase-debug.*.log*
 .firebase/
 
 # Firebase config
-.firebase.json
+firebase.json
 public/
+gitignore
 
 
 # Uncomment this if you'd like others to create their own Firebase project.
