@@ -43,14 +43,33 @@ function mapProjectsData() {
             ]
         },
         {
+            "title": "Girls Diary with Lock",
+            "image": "images/projects/diary.webp",
+            "type": "Product",
+            "labels": [
+                {
+                    "title": "Play",
+                    "link": "https://play.google.com/store/apps/details?id=com.irfaanblogger.girlsdiary"
+                },
+                // {
+                //     "title": "Web",
+                //     "link": "https://mhmzdev.github.io/quran/"
+                // },
+                // {
+                //     "title": "GitHub",
+                //     "link": "https://github.com/Taimoork8/WallpaperHub"
+                // }
+            ]
+        },
+        {
             "title": "WallpapHub",
             "image": "images/projects/WallpaperHub.webp",
             "type": "Open Source",
             "labels": [
-                {
-                    "title": "Play",
-                    "link": "https://play.google.com/store/apps/details?id=com.flutterwo"
-                },
+                // {
+                //     "title": "Play",
+                //     "link": "https://play.google.com/store/apps/details?id=com.flutterwo"
+                // },
                 // {
                 //     "title": "Web",
                 //     "link": "https://mhmzdev.github.io/quran/"

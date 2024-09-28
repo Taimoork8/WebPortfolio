@@ -15,11 +15,11 @@ function mapContactDetails() {
             "label": "kingtaimoor405@gmail.com",
             "link": "mailto:kingtaimoor405@gmail.com"
         },
-        // {
-        //     "icon": "images/svgs/upwork.svg",
-        //     "label": "Hire Me",
-        //     "link": "https://www.upwork.com/freelancers/~01e278592d21473da3?s=996364627857502209"
-        // }
+        {
+            "icon": "images/svgs/upwork.svg",
+            "label": "Hire Me",
+            "link": "https://www.upwork.com/freelancers/~01e278592d21473da3?s=996364627857502209"
+        }
     ];
 
     for (var i = 0; i < contactInfo.length; i++) {

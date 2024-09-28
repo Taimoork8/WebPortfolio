@@ -20,12 +20,16 @@ function mapExperienceData() {
                 "Dart package"
             ],
             "details": [
-                "Handled local packages to maintain custom components and to maintain API architecture",
-                "Maintaining layered architecture for better encapsulation and abstraction of code from Application layer to domain layer and to data layer",
-                "Learned GitLab actions for CI/CD",
-                "Integration of REST APIs, Firebase and local cached concepts for better user experience",
-                "Added features in huge code base with scalability in mind, along with other concepts of OOP and design pattern.",
-                "Working on content management system(CMS) or enterprise resource planning(ERP)"
+                "❖ Lead the development and optimization of the Wi3bit Content Management System ",
+                "(CMS) and mobile applications. ",
+                "❖ Spearheaded the enhancement of mobile applications, ensuring alignment with evolving ",
+                "industry standards and best practices. ",
+                "❖ Collaborated closely with product managers and cross-functional teams to define project ",
+                "roadmaps, deliverables, and timelines. ",
+                "❖ Established coding milestones, achieving early-stage deployment goals and ensuring a ",
+                "seamless user experience across all platforms. ",
+                "❖ Introduced process improvements and code quality initiatives that boosted productivity and ",
+                "reduced bug occurrences. "
             ]
         },
         {
@@ -41,16 +45,14 @@ function mapExperienceData() {
                 "Dart package"
             ],
             "details": [
-                "Working with flutter_bloc state management, alongside provider to maintain local states and global use cases",
-                "Integrated payment gateways into flutter app with REST APIs",
-                "Handled local packages to maintain custom components and to maintain API architecture",
-                "Maintaining layered architecture for better encapsulation and abstraction of code from Application layer to domain layer and to data layer",
-                "Learned GitHub actions for CI/CD",
-                "Worked with various env. flavors in flutter app (dev, qa, stage, prod)",
-                "Learned concepts like ACL (Access Control List) for maintaining features in live app",
-                "Integration of REST APIs, Firebase and local cached concepts for better user experience",
-                "Added features in huge code base with scalability in mind, along with other concepts of OOP and design pattern.",
-                "Worked in Agile software methodology, worked in sprints and different team structures like Squads.",
+                "❖ Designed, developed, and deployed mobile applications that increased company revenue by ",  
+                "25% and generated over 10,000 downloads. ",
+                "❖ Modernized legacy systems, integrating Flutter and Dart to enhance app performance, ",
+                "scalability, and user engagement. ",
+                "❖ Coordinated end-to-end project execution, including requirements gathering, development, ",
+                "testing, and release, ensuring on-time delivery. ",
+                "❖ Improved app functionality by implementing customer feedback and conducting extensive", 
+                "usability testing, resulting in a 15% increase in user satisfaction. ",
             ]
         },
         {
@@ -65,12 +67,12 @@ function mapExperienceData() {
                 "Cloud functions",
             ],
             "details": [
-                "Developed first MVP for android application",
-                "Upgraded MVP to latest flutter SDK as the MVP was developed in flutter 1.x.x",
-                "Currently handling the BETA version for the mobile app using flutter (android/iOS) both",
-                "Written cloud functions on firebase to handling some of the backend logic that needs to be separated from mobile application layer",
-                "Followed bloc architecture and state management for scalable application",
-                "Implemented caching techniques for better UX",
+                "❖ Developed first MVP for android application",
+                "❖ Upgraded MVP to latest flutter SDK as the MVP was developed in flutter 1.x.x",
+                "❖ Currently handling the BETA version for the mobile app using flutter (android/iOS) both",
+                "❖ Written cloud functions on firebase to handling some of the backend logic that needs to be separated from mobile application layer",
+                "❖ Followed bloc architecture and state management for scalable application",
+                "❖ Implemented caching techniques for better UX",
             ]
         },
         {
@@ -85,12 +87,12 @@ function mapExperienceData() {
                 "REST APIs",
             ],
             "details": [
-                "Learned new materials, processes, and programs quickly.",
-                "Participated in on-the-job training, working closely with supervisors and",
-                "coworkers and asking appropriate questions.",
-                "Attended training courses to build understanding of processes,",
-                "techniques, and industry.",
-                "Shadowed senior team members to learn all related jobs and tasks.",
+                "❖ Learned new materials, processes, and programs quickly.",
+                "❖ Participated in on-the-job training, working closely with supervisors and",
+                "❖ coworkers and asking appropriate questions.",
+                "❖ Attended training courses to build understanding of processes,",
+                "❖ techniques, and industry.",
+                "❖ Shadowed senior team members to learn all related jobs and tasks.",
             ]
         },
         
