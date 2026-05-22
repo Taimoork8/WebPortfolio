@@ -98,39 +98,8 @@ function buildProjects() {
     const card = document.createElement('div');
     card.className = 'project';
 
-    // Only render thumbnail if a real image exists — no placeholders
-    if (p.image) {
-      const thumb = document.createElement('div');
-      thumb.className = 'thumb';
-      const img = document.createElement('img');
-      img.src = p.image;
-      img.alt = p.title;
-      img.loading = 'lazy';
-      thumb.appendChild(img);
-      card.appendChild(thumb);
-    }
-
     const body = document.createElement('div');
     body.className = 'project-body';
-
-    const metaRow = document.createElement('div');
-    metaRow.className = 'meta-row';
-
-    const typeEl = document.createElement('span');
-    typeEl.className = 'proj-type';
-    typeEl.textContent = p.type;
-
-    const dot = document.createElement('span');
-    dot.style.cssText = 'color:var(--fg-faint);font-size:var(--t-12);';
-    dot.textContent = '·';
-
-    const yearEl = document.createElement('span');
-    yearEl.className = 'proj-year';
-    yearEl.textContent = p.year;
-
-    metaRow.appendChild(typeEl);
-    metaRow.appendChild(dot);
-    metaRow.appendChild(yearEl);
 
     const titleEl = document.createElement('h3');
     titleEl.textContent = p.title;
@@ -148,25 +117,9 @@ function buildProjects() {
       tagsEl.appendChild(tag);
     });
 
-    body.appendChild(metaRow);
     body.appendChild(titleEl);
     body.appendChild(descEl);
     body.appendChild(tagsEl);
-
-    if (p.links.length > 0) {
-      const linksEl = document.createElement('div');
-      linksEl.className = 'project-links';
-      p.links.forEach(l => {
-        const a = document.createElement('a');
-        a.className = 'proj-link';
-        a.href = l.url;
-        a.target = '_blank';
-        a.rel = 'noopener noreferrer';
-        a.textContent = l.label;
-        linksEl.appendChild(a);
-      });
-      body.appendChild(linksEl);
-    }
 
     card.appendChild(body);
     grid.appendChild(card);

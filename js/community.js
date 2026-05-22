@@ -9,7 +9,7 @@ function mapCommunityData() {
             "name": "Flutter Islamabad, Pakistan",
             "role": "Community Lead",
             "session": "April 2020 - Present",
-            "logo": "images/community/flutter-isb.png",
+            "logo": "images/community/flutter-isb.webp",
             "link": "https://meetup.com/flutter-islamabad",
             "details": "Flutter Islamabad, Pakistan - First ever flutter community to be officially registered at Flutter Network (Google). Hosted events, sessions, hands- on and workshops and trained hundred and thousands of developers."
         },
@@ -17,7 +17,7 @@ function mapCommunityData() {
             "name": "Google Developer Student Clubs",
             "role": "GDSC Lead",
             "session": "June 2020 - June 2021",
-            "logo": "images/community/dsc.png",
+            "logo": "images/community/dsc.webp",
             "link": "https://gdsc.community.dev/comsats-university-islamabad-campus/",
             "details": "Google Developer Student Clubs - Trained hundreds of students about various technologies like flutter, tensorflow, Git and GitHub etc."
         },
@@ -25,7 +25,7 @@ function mapCommunityData() {
             "name": "Microsoft Student Ambassador",
             "role": "Student Ambassador",
             "session": "Feb 2021 - Feb 2022",
-            "logo": "images/community/mlsa.png",
+            "logo": "images/community/mlsa.webp",
             "link": "https://mlsa.pk/",
             "details": "Microsoft Student Ambassador - Helped students in learning technologies like Python, Azure and GitHub for their projects in college and real-life. Learned team management, event management and helped other students to grow their career as student ambassador."
         }
