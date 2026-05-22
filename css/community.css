@@ -1,116 +1,114 @@
-.communities {
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
+/* ─── Community ──────────────────────────────────────────────── */
+#community {
+  background: transparent;
 }
 
-.community-div {
-    padding: 5%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background-color: var(--bg-dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.community-stats {
+  display: flex;
+  gap: var(--s-9);
+  margin-bottom: var(--s-8);
+  flex-wrap: wrap;
+}
+
+.c-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+}
+
+.c-stat .num {
+  font-size: var(--t-64);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--fg);
+  letter-spacing: var(--tr-display);
+  display: block;
+}
+
+.c-stat .num em {
+  font-family: var(--font-sans);
+  font-style: normal;
+  color: var(--accent);
+}
+
+.c-stat .lbl {
+  font-family: var(--font-mono);
+  font-size: var(--t-12);
+  color: var(--fg-faint);
+  text-transform: uppercase;
+  letter-spacing: var(--tr-caps);
+}
+
+.community-pullquote {
+  border-left: 2px solid var(--accent);
+  padding-left: var(--s-5);
+  margin-bottom: var(--s-9);
+}
+
+.community-pullquote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--t-22);
+  color: var(--fg-muted);
+  line-height: var(--lh-snug);
+  max-width: 60ch;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-5);
 }
 
 .community-card {
-    margin-top: 4%;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    background-color: var(--bg);
-    width: 500px;
-    padding: 1%;
-    padding-left: 10%;
-    border-radius: 8px;
-    transition: 0.5s;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-3);
+  padding: var(--s-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  transition: border-color var(--dur) var(--ease);
 }
 
-.community-card:hover {
-    text-decoration: none;
-    box-shadow: 0px 0px 10px var(--primary-green);
-    cursor: pointer;
+.community-card:hover { border-color: var(--border-2); }
+
+.community-card .cc-name {
+  font-weight: 500;
+  font-size: var(--t-16);
+  color: var(--fg);
 }
 
-.community-info {
-    margin-left: 5%;
-    padding-top: 8%;
-    background-color: transparent;
+.community-card .cc-role {
+  font-family: var(--font-mono);
+  font-size: var(--t-12);
+  color: var(--accent);
+  order: -1;
 }
 
-.community-logo {
-    height: 80px;
-    background-color: transparent;
+.community-card .cc-desc {
+  font-size: var(--t-14);
+  color: var(--fg-muted);
+  line-height: var(--lh-body);
 }
 
-.c-title {
-    color: var(--primary-green);
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .community-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.c-position {
-    color: white;
-    font-weight: 700;
-}
+@media (max-width: 600px) {
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
 
-.c-session {
-    color: var(--text-light)
-}
+  .community-stats {
+    gap: var(--s-6);
+  }
 
-.cw-info {
-    background-color: transparent;
-    margin-left: 5%;
-    width: 35%;
-}
-
-.cw-title {
-    font-weight: 600;
-    line-height: 0;
-    color: var(--primary-green);
-}
-
-.cw-quote {
-    font-style: italic;
-    color: var(--text-light);
-}
-
-.cw-stats-row {
-    padding-top: 3%;
-    background-color: transparent;
-    display: flex;
-}
-
-.cw-stats-div {
-    background-color: transparent;
-    max-width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 5%;
-}
-
-.cw-number {
-    color: white;
-    font-weight: 700;
-}
-
-.cw-stats-text {
-    line-height: 13px;
-    color: var(--text-light);
-    font-weight: 500;
-    font-size: 12px;
-    margin-left: 5%;
-    background-color: transparent;
-    letter-spacing: 2px;
-}
-
-.cw-points {
-    padding: 0;
-    margin-top: 5%;
-    background-color: transparent;
-}
-
-.cw-point {
-    color: white;
-    line-height: 35px;
+  .c-stat .num {
+    font-size: var(--t-48);
+  }
 }

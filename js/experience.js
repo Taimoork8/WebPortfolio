@@ -1,155 +1,94 @@
-document.addEventListener("DOMContentLoaded", function () {
-    mapExperienceData();
-});
+document.addEventListener('DOMContentLoaded', buildExperience);
 
+function buildExperience() {
+  const list = document.getElementById('exp-list');
+  if (!list) return;
 
-function mapExperienceData() {
-
-    let exp = [
-        {
-            "org": "Wi3bit",
-            "position": "Flutter Developer",
-            "duration": "Aug 2023 - Present",
-            "technologies": [
-                "Flutter",
-                "Dart",
-                "GitHub Actions",
-                "GitLab",
-                "Firebase",
-                "REST APIs",
-                "Dart package"
-            ],
-            "details": [
-                "❖ Lead the development and optimization of the Wi3bit Content Management System ",
-                "(CMS) and mobile applications. ",
-                "❖ Spearheaded the enhancement of mobile applications, ensuring alignment with evolving ",
-                "industry standards and best practices. ",
-                "❖ Collaborated closely with product managers and cross-functional teams to define project ",
-                "roadmaps, deliverables, and timelines. ",
-                "❖ Established coding milestones, achieving early-stage deployment goals and ensuring a ",
-                "seamless user experience across all platforms. ",
-                "❖ Introduced process improvements and code quality initiatives that boosted productivity and ",
-                "reduced bug occurrences. "
-            ]
-        },
-        {
-            "org": "SDH",
-            "position": "Flutter Developer (Contract)",
-            "duration": "May 2023 - Aug 2023",
-            "technologies": [
-                "Flutter",
-                "Dart",
-                "GitHub Actions",
-                "Firebase",
-                "REST APIs",
-                "Dart package"
-            ],
-            "details": [
-                "❖ Designed, developed, and deployed mobile applications that increased company revenue by ",  
-                "25% and generated over 10,000 downloads. ",
-                "❖ Modernized legacy systems, integrating Flutter and Dart to enhance app performance, ",
-                "scalability, and user engagement. ",
-                "❖ Coordinated end-to-end project execution, including requirements gathering, development, ",
-                "testing, and release, ensuring on-time delivery. ",
-                "❖ Improved app functionality by implementing customer feedback and conducting extensive", 
-                "usability testing, resulting in a 15% increase in user satisfaction. ",
-            ]
-        },
-        {
-            "org": "softechsquare",
-            "position": "Flutter Developer",
-            "duration": "Nov 2022 - May 2023",
-            "technologies": [
-                "Flutter/Dart",
-                "GitHub Actions",
-                "Firebase",
-                "REST APIs",
-                "Cloud functions",
-            ],
-            "details": [
-                "❖ Developed first MVP for android application",
-                "❖ Upgraded MVP to latest flutter SDK as the MVP was developed in flutter 1.x.x",
-                "❖ Currently handling the BETA version for the mobile app using flutter (android/iOS) both",
-                "❖ Written cloud functions on firebase to handling some of the backend logic that needs to be separated from mobile application layer",
-                "❖ Followed bloc architecture and state management for scalable application",
-                "❖ Implemented caching techniques for better UX",
-            ]
-        },
-        {
-            "org": "PTCP",
-            "position": "Flutter Developer Trainee",
-            "duration": "May 2022 - Oct 2022",
-            "technologies": [
-                "Flutter",
-                "Dart",
-                "GitHub Actions",
-                "Firebase",
-                "REST APIs",
-            ],
-            "details": [
-                "❖ Learned new materials, processes, and programs quickly.",
-                "❖ Participated in on-the-job training, working closely with supervisors and",
-                "❖ coworkers and asking appropriate questions.",
-                "❖ Attended training courses to build understanding of processes,",
-                "❖ techniques, and industry.",
-                "❖ Shadowed senior team members to learn all related jobs and tasks.",
-            ]
-        },
-        
-    ];
-
-    for (var i = 0; i < exp.length; i++) {
-        var expCard = document.createElement("div");
-        expCard.className = "exp-card";
-
-        var expMetaDiv = document.createElement("div");
-        expMetaDiv.className = "exp-meta";
-
-        var orgName = document.createElement("h2");
-        orgName.className = "heading2 exp-org";
-        orgName.innerHTML = exp[i]["org"];
-
-        var position = document.createElement("span");
-        position.className = "label exp-position";
-        position.innerHTML = exp[i]["position"];
-
-        var session = document.createElement("p");
-        session.className = "body2 exp-session";
-        session.innerHTML = exp[i]["duration"];
-
-        var technologiesHeading = document.createElement("span");
-        technologiesHeading.className = "body2 exp-tech";
-        technologiesHeading.innerHTML = "Technologies";
-
-        var technologiesList = document.createElement("ul");
-        technologiesList.className = "exp-tech-list";
-
-        for (var k = 0; k < exp[i]["technologies"].length; k++) {
-            var techName = document.createElement("li");
-            techName.className = "body2 exp-tech-item";
-            techName.innerHTML = exp[i]["technologies"][k];
-            technologiesList.appendChild(techName);
-        }
-        expMetaDiv.appendChild(orgName);
-        expMetaDiv.appendChild(position);
-        expMetaDiv.appendChild(session);
-        expMetaDiv.appendChild(technologiesHeading);
-        expMetaDiv.appendChild(technologiesList);
-        expCard.appendChild(expMetaDiv);
-
-        var detailsList = document.createElement("ul");
-        detailsList.className = "exp-detail";
-
-        for (var k = 0; k < exp[i]["details"].length; k++) {
-            var detail = document.createElement("li");
-            detail.className = "body2 exp-detail-item";
-            detail.innerHTML = exp[i]["details"][k];
-            detailsList.appendChild(detail);
-        }
-
-        expCard.appendChild(detailsList);
-
-        var experiences = document.getElementById("exp");
-        experiences.appendChild(expCard);
+  const jobs = [
+    {
+      year: '2026 — now',
+      title: 'Software Engineer',
+      company: 'Noki System',
+      summary: 'Building the Noki BLE Support App from scratch in Flutter for seamless Bluetooth Low Energy communication with ESP/STM-based smart cabinet hardware. Developing cross-platform mobile apps for Noki\'s PIE cabinet management system, integrating RESTful APIs with a Django backend for real-time locker control and audit logging. Also contributing embedded firmware for ESP microcontrollers and STM-based hardware, and Django backend APIs for BLE lock history, user management, and cabinet dashboards.',
+      tags: ['Flutter', 'Django', 'BLE', 'ESP', 'STM', 'Firmware', 'REST APIs', 'Python']
+    },
+    {
+      year: 'Mar 2025',
+      title: 'Full Stack Engineer',
+      company: 'Wi3bit',
+      summary: 'Architected end-to-end solutions integrating mobile applications with robust backend services. Designed and optimised databases for application performance at scale. Collaborated with stakeholders to translate business requirements into technical specifications. Mentored junior developers in frontend and backend best practices.',
+      tags: ['Flutter', 'Django', 'PostgreSQL', 'REST APIs', 'Full Stack']
+    },
+    {
+      year: '2023 — 2025',
+      title: 'Lead Mobile Engineer',
+      company: 'Wi3bit',
+      summary: 'Led mobile development across multiple production Flutter apps. Integrated RESTful APIs to enhance functionality and support business logic. Led code reviews enforcing MVVM architecture and coding standards. Collaborated cross-functionally to define scope and deliver on time. Optimised apps for scalability and user experience.',
+      tags: ['Flutter', 'Dart', 'MVVM', 'Firebase', 'Team Lead', 'REST APIs']
+    },
+    {
+      year: '2023',
+      title: 'Contract Flutter Developer',
+      company: 'SDH',
+      summary: 'Built, designed, and deployed mobile applications that increased company revenue by 25% and generated over 10,000 downloads. Modernised legacy systems with Flutter/Dart, improving performance and scalability. Coordinated end-to-end project execution — requirements, development, testing, release. Improved user satisfaction by 15% through usability testing and customer feedback.',
+      tags: ['Flutter', 'Dart', 'Firebase', 'REST APIs']
+    },
+    {
+      year: '2022 — 2023',
+      title: 'Flutter Developer Intern',
+      company: 'Softech Square Solution',
+      summary: 'Contributed clean, efficient code across multiple projects adhering to best practices in software design. Gained hands-on experience across the full mobile app development lifecycle, enhancing debugging and optimisation skills.',
+      tags: ['Flutter', 'Dart', 'Git', 'Firebase']
+    },
+    {
+      year: '2022 — now',
+      title: 'Flutter Developer',
+      company: 'Freelance · Remote',
+      summary: 'Developed and launched various mobile applications for clients, collectively achieving over 1,000 downloads. Delivered user-focused apps with high-quality code and optimised interfaces. Established strong client relationships through consistent updates and on-time delivery.',
+      tags: ['Flutter', 'Dart', 'Firebase', 'REST APIs']
     }
+  ];
+
+  jobs.forEach(job => {
+    const row = document.createElement('div');
+    row.className = 'exp-row';
+
+    const yearEl = document.createElement('div');
+    yearEl.className = 'exp-year';
+    yearEl.textContent = job.year;
+
+    const roleEl = document.createElement('div');
+    roleEl.className = 'exp-role';
+
+    const titleEl = document.createElement('div');
+    titleEl.className = 'exp-title';
+    titleEl.textContent = job.title;
+
+    const companyEl = document.createElement('div');
+    companyEl.className = 'exp-company';
+    companyEl.textContent = job.company;
+
+    const tagsEl = document.createElement('div');
+    tagsEl.className = 'exp-tags';
+    job.tags.forEach(t => {
+      const tag = document.createElement('span');
+      tag.className = 'exp-tag';
+      tag.textContent = t;
+      tagsEl.appendChild(tag);
+    });
+
+    roleEl.appendChild(titleEl);
+    roleEl.appendChild(companyEl);
+    roleEl.appendChild(tagsEl);
+
+    const summaryEl = document.createElement('div');
+    summaryEl.className = 'exp-summary';
+    summaryEl.textContent = job.summary;
+
+    row.appendChild(yearEl);
+    row.appendChild(roleEl);
+    row.appendChild(summaryEl);
+
+    list.appendChild(row);
+  });
 }

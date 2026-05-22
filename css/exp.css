@@ -1,63 +1,93 @@
-.exp-div {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* ─── Experience ─────────────────────────────────────────────── */
+#experience {
+  background: transparent;
 }
 
-.exp-card {
-    margin-top: 5em;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 15%;
-    padding-right: 5%;
-    display: flex;
-    justify-content: center;
-    background-color: var(--bg-dark);
-    width: 90%;
-    border-radius: 8px;
+.exp-list {
+  border-top: 1px solid var(--border);
 }
 
-.exp-meta {
-    background-color: transparent;
+.exp-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 1fr;
+  gap: var(--s-6);
+  padding: var(--s-6) 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+  transition: background var(--dur) var(--ease), padding-inline var(--dur) var(--ease);
+  border-radius: 0;
 }
 
-.exp-org {
-    color: var(--primary-green);
+.exp-row:hover {
+  background: var(--surface);
+  padding-inline: var(--s-4);
+  border-radius: var(--r-2);
+  border-bottom-color: transparent;
+  margin-inline: calc(var(--s-4) * -1);
 }
 
-.exp-position {
-    color: var(--text-light);
+.exp-year {
+  font-family: var(--font-mono);
+  font-size: var(--t-13);
+  color: var(--fg-faint);
+  padding-top: 3px;
+  white-space: nowrap;
 }
 
-.exp-session {
-    color: white;
+.exp-role {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
 }
 
-.exp-tech {
-    color: white;
-    font-weight: 700;
+.exp-title {
+  font-weight: 500;
+  font-size: var(--t-16);
+  color: var(--fg);
 }
 
-.exp-tech-list {
-    background-color: transparent;
-    padding: 0;
-    padding-left: 10%;
+.exp-company {
+  font-family: var(--font-mono);
+  font-size: var(--t-13);
+  color: var(--accent);
 }
 
-.exp-tech-item {
-    line-height: 30px;
-    color: white;
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-top: var(--s-3);
 }
 
-.exp-detail {
-    width: 70%;
-    background-color: transparent;
-    margin-left: 3%;
-    line-height: 30px;
+.exp-tag {
+  font-family: var(--font-mono);
+  font-size: var(--t-11);
+  color: var(--fg-faint);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-1);
+  padding: 2px var(--s-2);
 }
 
-.exp-detail-item {
-    color: white;
+.exp-summary {
+  font-size: var(--t-14);
+  color: var(--fg-muted);
+  line-height: var(--lh-body);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .exp-row {
+    grid-template-columns: 1fr;
+    gap: var(--s-2);
+  }
+
+  .exp-row:hover {
+    padding-inline: var(--s-3);
+    margin-inline: calc(var(--s-3) * -1);
+  }
+
+  .exp-year {
+    font-size: var(--t-12);
+  }
 }

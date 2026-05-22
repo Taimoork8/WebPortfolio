@@ -1,209 +1,174 @@
-document.addEventListener("DOMContentLoaded", function () {
-    mapProjectsData();
-});
+document.addEventListener('DOMContentLoaded', buildProjects);
 
-function mapProjectsData() {
-    let projects = [
-        {
-            "title": "Wi3bit",
-            "image": "images/projects/wi3bit.webp",
-            "type": "Product",
-            "labels": [
-                // {
-                //     "title": "App",
-                //     "link": "https://apps.apple.com/hk/app/storius-app/id1581928786?l=en"
-                // },
-                {
-                    "title": "Play",
-                    "link": "https://play.google.com/store/apps/details?id=com.wi3bit.default_app&hl=en"
-                },
-                {
-                    "title": "Web",
-                    "link": "https://wi3bit.com/"
-                }
-            ]
-        },
-        {
-            "title": "Sehr",
-            "image": "images/projects/sehr.webp",
-            "type": "Product",
-            "labels": [
-                // {
-                //     "title": "App",
-                //     "link": "https://apps.apple.com/hk/app/storius-app/id1581928786?l=en"
-                // },
-                {
-                    "title": "Play",
-                    "link": "https://play.google.com/store/apps/details?id=com.sehr.pk"
-                },
-                // {
-                //     "title": "Web",
-                //     "link": "https://storiusapp.com/"
-                // }
-            ]
-        },
-        {
-            "title": "Girls Diary with Lock",
-            "image": "images/projects/diary.webp",
-            "type": "Product",
-            "labels": [
-                {
-                    "title": "Play",
-                    "link": "https://play.google.com/store/apps/details?id=com.irfaanblogger.girlsdiary"
-                },
-                // {
-                //     "title": "Web",
-                //     "link": "https://mhmzdev.github.io/quran/"
-                // },
-                // {
-                //     "title": "GitHub",
-                //     "link": "https://github.com/Taimoork8/WallpaperHub"
-                // }
-            ]
-        },
-        {
-            "title": "WallpapHub",
-            "image": "images/projects/WallpaperHub.webp",
-            "type": "Open Source",
-            "labels": [
-                // {
-                //     "title": "Play",
-                //     "link": "https://play.google.com/store/apps/details?id=com.flutterwo"
-                // },
-                // {
-                //     "title": "Web",
-                //     "link": "https://mhmzdev.github.io/quran/"
-                // },
-                {
-                    "title": "GitHub",
-                    "link": "https://github.com/Taimoork8/WallpaperHub"
-                }
-            ]
-        },
-        {
-            "title": "Spotify",
-            "image": "images/projects/spotify.webp",
-            "type": "Open Source",
-            "labels": [
-                // {
-                //     "title": "Play",
-                //     "link": "https://play.google.com/store/apps/details?id=com.hmz.folio"
-                // },
-                // {
-                //     "title": "Web",
-                //     "link": "http://mhmzdev.github.io/devfolio"
-                // },
-                {
-                    "title": "GitHub",
-                    "link": "https://github.com/Taimoork8/spotify-clone"
-                }
-            ]
-        },
-        
-        {
-            "title": "COVID-19 Tracker",
-            "image": "images/projects/covid.webp",
-            "type": "Open Source",
-            "labels": [
-                {
-                    "title": "GitHub",
-                    "link": "https://github.com/Taimoork8/covid-19"
-                }
-            ]
-        },
-        {
-            "title": "Old Seniora fans",
-            "image": "images/projects/fc.webp",
-            "type": "Open Source",
-            "labels": [
-                // {
-                //     "title": "App",
-                //     "link": "https://apps.apple.com/in/app/sastaticket-flight-hotels/id1564441908"
-                // },
-                // {
-                //     "title": "Play",
-                //     "link": "https://play.google.com/store/apps/details?id=com.pk.sastaticket&hl=en&gl=US"
-                // },
-                {
-                    "title": "GitHub",
-                    "link": "https://github.com/Taimoork8/old-seniora-fan"
-                }
-            ]
-        },       
-    ];
+function buildProjects() {
+  const grid = document.getElementById('projects-grid');
+  if (!grid) return;
 
-    for (var i = 0; i < projects.length; i++) {
-        var project = projects[i];
-        var title = project.title;
-        var type = project.type;
-        var image = project.image;
-
-        var card = document.createElement('div');
-        card.className = "project-card";
-
-        var imageDiv = document.createElement('div');
-        imageDiv.className = "p-image";
-        var projectLabel = document.createElement("div");
-        projectLabel.className = "label p-type";
-        projectLabel.innerHTML = type;
-
-        var projectImg = document.createElement("img");
-        projectImg.className = "p-image-bg";
-        projectImg.src = image;
-        projectImg.alt = title;
-
-        imageDiv.appendChild(projectLabel);
-        imageDiv.appendChild(projectImg);
-
-        var projectName = document.createElement("p");
-        projectName.className = "body1 p-title";
-        projectName.innerHTML = title;
-
-        var labels = document.createElement("div");
-        labels.className = "p-labels";
-
-        for (var j = 0; j < project.labels.length; j++) {
-            var title = project.labels[j]["title"];
-            var link = project.labels[j]["link"];
-
-            var label = document.createElement('a');
-            label.className = "p-label";
-            var labelIcon = document.createElement("i");
-
-            if (title == "App") {
-                labelIcon.className = "p-label-icon fa fa-apple";
-            } else if (title == "Play") {
-                labelIcon.className = "p-label-icon fa fa-google";
-            } else if (title == "Web") {
-                labelIcon.className = "p-label-icon fa fa-globe";
-            } else if (title == "GitHub") {
-                labelIcon.className = "p-label-icon fa fa-github";
-            } else if (title == "Package") {
-                labelIcon.className = "p-label-icon material-icons";
-                labelIcon.innerHTML = "widgets";
-                labelIcon.style.fontSize = "16px";
-            }
-
-            var labelText = document.createElement("span");
-            labelText.className = "label p-label-text";
-            labelText.innerHTML = title;
-
-            label.href = link;
-            label.target = "_blank";
-
-            label.appendChild(labelIcon);
-            label.appendChild(labelText);
-
-            labels.appendChild(label);
-        }
-
-
-        card.appendChild(projectLabel);
-        card.appendChild(projectImg);
-        card.appendChild(projectName);
-        card.appendChild(labels);
-
-        var projectsDiv = document.getElementById("projects");
-        projectsDiv.appendChild(card);
+  const projects = [
+    {
+      title: 'Wi3bit Schools Platform',
+      image: 'images/projects/wi3bit.webp',
+      type: 'Product',
+      year: '2025',
+      desc: 'Comprehensive school management system with attendance tracking, grading, parent portal, and administrative dashboard. Used across multiple schools in Pakistan.',
+      tags: ['Flutter', 'Django', 'PostgreSQL', 'REST API'],
+      links: [
+        { label: 'Play Store', url: 'https://play.google.com/store/apps/details?id=com.wi3bit.default_app&hl=en' },
+        { label: 'Website', url: 'https://wi3bit.com/' }
+      ]
+    },
+    {
+      title: 'Sehr',
+      image: 'images/projects/sehr.webp',
+      type: 'Product',
+      year: '2024',
+      desc: 'Health & wellness app focused on Suhoor timings, prayer alerts, and daily wellness tracking for Muslim users. Published on Google Play.',
+      tags: ['Flutter', 'Firebase', 'Dart'],
+      links: [
+        { label: 'Play Store', url: 'https://play.google.com/store/apps/details?id=com.sehr.pk' }
+      ]
+    },
+    {
+      title: 'Karwan-e-Falah Clinic',
+      image: 'images/projects/kf.svg',
+      type: 'Product',
+      year: '2024',
+      desc: 'Clinic management system for Karwan-e-Falah charity. Handles patient records, appointment scheduling, and staff management for a charitable healthcare service.',
+      tags: ['Flutter', 'Django', 'REST API', 'PostgreSQL'],
+      links: []
+    },
+    {
+      title: 'Girls Diary with Lock',
+      image: 'images/projects/diary.webp',
+      type: 'Product',
+      year: '2023',
+      desc: 'Private diary app with biometric and PIN lock, rich text entries, mood tracking, and encrypted local storage. Available on Google Play.',
+      tags: ['Flutter', 'SQLite', 'Local Auth'],
+      links: [
+        { label: 'Play Store', url: 'https://play.google.com/store/apps/details?id=com.irfaanblogger.girlsdiary' }
+      ]
+    },
+    {
+      title: 'WallpaperHub',
+      image: 'images/projects/WallpaperHub.webp',
+      type: 'Open Source',
+      year: '2022',
+      desc: 'Open-source wallpaper app with HD wallpaper browsing, category filtering, and download functionality.',
+      tags: ['Flutter', 'REST API', 'Dart'],
+      links: [
+        { label: 'GitHub', url: 'https://github.com/Taimoork8/WallpaperHub' }
+      ]
+    },
+    {
+      title: 'Spotify Clone',
+      image: 'images/projects/spotify.webp',
+      type: 'Open Source',
+      year: '2022',
+      desc: 'Functional Spotify UI clone built with Flutter. Features music playback, playlists, and a pixel-perfect UI replicating the original Spotify experience.',
+      tags: ['Flutter', 'Audio', 'Dart'],
+      links: [
+        { label: 'GitHub', url: 'https://github.com/Taimoork8/spotify-clone' }
+      ]
+    },
+    {
+      title: 'COVID-19 Tracker',
+      image: 'images/projects/covid.webp',
+      type: 'Open Source',
+      year: '2021',
+      desc: 'Real-time COVID-19 statistics tracker with country-wise data, visual charts, and live API data from public health sources.',
+      tags: ['Flutter', 'REST API', 'Charts'],
+      links: [
+        { label: 'GitHub', url: 'https://github.com/Taimoork8/covid-19' }
+      ]
+    },
+    {
+      title: 'Old Seniora Fans',
+      image: 'images/projects/fc.webp',
+      type: 'Open Source',
+      year: '2021',
+      desc: 'Fan community app for Seniora fans with live news feed, match updates, and fan discussion features powered by Firebase.',
+      tags: ['Flutter', 'Firebase', 'Firestore'],
+      links: [
+        { label: 'GitHub', url: 'https://github.com/Taimoork8/old-seniora-fan' }
+      ]
     }
+  ];
+
+  projects.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'project';
+
+    // Only render thumbnail if a real image exists — no placeholders
+    if (p.image) {
+      const thumb = document.createElement('div');
+      thumb.className = 'thumb';
+      const img = document.createElement('img');
+      img.src = p.image;
+      img.alt = p.title;
+      img.loading = 'lazy';
+      thumb.appendChild(img);
+      card.appendChild(thumb);
+    }
+
+    const body = document.createElement('div');
+    body.className = 'project-body';
+
+    const metaRow = document.createElement('div');
+    metaRow.className = 'meta-row';
+
+    const typeEl = document.createElement('span');
+    typeEl.className = 'proj-type';
+    typeEl.textContent = p.type;
+
+    const dot = document.createElement('span');
+    dot.style.cssText = 'color:var(--fg-faint);font-size:var(--t-12);';
+    dot.textContent = '·';
+
+    const yearEl = document.createElement('span');
+    yearEl.className = 'proj-year';
+    yearEl.textContent = p.year;
+
+    metaRow.appendChild(typeEl);
+    metaRow.appendChild(dot);
+    metaRow.appendChild(yearEl);
+
+    const titleEl = document.createElement('h3');
+    titleEl.textContent = p.title;
+
+    const descEl = document.createElement('p');
+    descEl.className = 'desc';
+    descEl.textContent = p.desc;
+
+    const tagsEl = document.createElement('div');
+    tagsEl.className = 'tags';
+    p.tags.forEach(t => {
+      const tag = document.createElement('span');
+      tag.className = 'tag';
+      tag.textContent = t;
+      tagsEl.appendChild(tag);
+    });
+
+    body.appendChild(metaRow);
+    body.appendChild(titleEl);
+    body.appendChild(descEl);
+    body.appendChild(tagsEl);
+
+    if (p.links.length > 0) {
+      const linksEl = document.createElement('div');
+      linksEl.className = 'project-links';
+      p.links.forEach(l => {
+        const a = document.createElement('a');
+        a.className = 'proj-link';
+        a.href = l.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.textContent = l.label;
+        linksEl.appendChild(a);
+      });
+      body.appendChild(linksEl);
+    }
+
+    card.appendChild(body);
+    grid.appendChild(card);
+  });
 }
